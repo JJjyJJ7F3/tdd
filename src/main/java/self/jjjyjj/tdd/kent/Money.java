@@ -5,10 +5,7 @@ public class Money {
 
     @Override
     public boolean equals(Object obj) {
-        if (!(obj instanceof Money)) {
-            return false;
-        }
-        return this.amount == ((Money) obj).amount;
+        return this.amount == ((Money) obj).amount && this.getClass() == obj.getClass();
     }
 
 }
