@@ -1,8 +1,6 @@
 package self.jjjyjj.tdd.kent;
 
 public class Dollar extends Money {
-    private final int amount;
-
     public Dollar(int amount) {
         this.amount = amount;
     }
