@@ -9,6 +9,6 @@ public class Dollar {
     }
 
     public void times(int multiplier) {
-        this.amount = amount * 2;
+        this.amount = amount * multiplier;
     }
 }
