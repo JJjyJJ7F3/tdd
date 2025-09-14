@@ -1,6 +1,6 @@
 package self.jjjyjj.tdd.kent;
 
-public class Franc {
+public class Franc extends Money {
     private final int amount;
 
     public Franc(int amount) {
@@ -16,7 +16,7 @@ public class Franc {
         if (!(obj instanceof Franc)) {
             return false;
         }
-        return this.amount == ((Franc)obj).amount;
+        return this.amount == ((Franc) obj).amount;
     }
 
 }
