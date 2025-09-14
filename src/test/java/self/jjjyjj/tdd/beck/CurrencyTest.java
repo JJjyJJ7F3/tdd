@@ -2,8 +2,8 @@ package self.jjjyjj.tdd.beck;
 
 import org.junit.jupiter.api.Test;
 
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class CurrencyTest {
     /**
@@ -14,17 +14,11 @@ public class CurrencyTest {
         // Arrange
         Dollar five = new Dollar(5);
 
-        // Act
-        Dollar product = five.times(2);
+        // Assert
+        assertEquals(new Dollar(10), five.times(2));
 
         // Assert
-        assertThat(product.amount).isEqualTo(10);
-
-        // Act
-        product = five.times(3);
-
-        // Assert
-        assertThat(product.amount).isEqualTo(15);
+        assertEquals(new Dollar(15), five.times(3));
     }
 
     @Test
