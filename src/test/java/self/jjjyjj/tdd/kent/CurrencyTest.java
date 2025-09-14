@@ -1,4 +1,4 @@
-package self.jjjyjj.tdd.beck;
+package self.jjjyjj.tdd.kent;
 
 import org.junit.jupiter.api.Test;
 
