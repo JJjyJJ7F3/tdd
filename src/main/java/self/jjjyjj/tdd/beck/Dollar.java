@@ -2,7 +2,7 @@ package self.jjjyjj.tdd.beck;
 
 public class Dollar {
 
-    public int amount;
+    private int amount;
 
     public Dollar(int amount) {
         this.amount = amount;
