@@ -11,9 +11,9 @@ public class Dollar extends Money {
 
     @Override
     public boolean equals(Object obj) {
-        if (!(obj instanceof Dollar)) {
+        if (!(obj instanceof Money)) {
             return false;
         }
-        return this.amount == ((Dollar) obj).amount;
+        return this.amount == ((Money) obj).amount;
     }
 }
