@@ -14,9 +14,15 @@ public class CurrencyTest {
         Dollar five = new Dollar(5);
 
         // Act
-        five.times(2);
+        Dollar product = five.times(2);
 
         // Assert
-        assertThat(five.amount).isEqualTo(10);
+        assertThat(product.amount).isEqualTo(10);
+
+        // Act
+        product = five.times(3);
+
+        // Assert
+        assertThat(product.amount).isEqualTo(15);
     }
 }
