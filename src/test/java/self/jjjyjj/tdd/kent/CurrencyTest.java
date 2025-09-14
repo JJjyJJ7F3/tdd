@@ -10,9 +10,9 @@ public class CurrencyTest {
      * for example, $5 * 2 = $10
      */
     @Test
-    public void testMultiplication() {
+    public void testDollarMultiplication() {
         // Arrange
-        Dollar five = new Dollar(5);
+        Dollar five = Money.dollar(5);
 
         // Assert
         assertEquals(new Dollar(10), five.times(2));
