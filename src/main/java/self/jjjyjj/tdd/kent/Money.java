@@ -1,6 +1,6 @@
 package self.jjjyjj.tdd.kent;
 
-public class Money {
+public abstract class Money {
     protected int amount;
 
     public static Dollar dollar(int amount) {
@@ -12,4 +12,5 @@ public class Money {
         return this.amount == ((Money) obj).amount && this.getClass() == obj.getClass();
     }
 
+    public abstract Money times(int amount);
 }
