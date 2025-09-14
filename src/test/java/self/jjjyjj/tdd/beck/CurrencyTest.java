@@ -22,6 +22,19 @@ public class CurrencyTest {
     }
 
     @Test
+    public void testFrancMultiplication() {
+        // Arrange
+        Franc five = new Franc(5);
+
+        // Assert
+        assertEquals(new Franc(10), five.times(2));
+
+        // Assert
+        assertEquals(new Franc(15), five.times(3));
+    }
+
+
+    @Test
     public void testEquality() {
         assertEquals(new Dollar(5), new Dollar(5));
 
