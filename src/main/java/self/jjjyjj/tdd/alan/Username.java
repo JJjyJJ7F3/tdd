@@ -5,7 +5,7 @@ package self.jjjyjj.tdd.alan;
  */
 public class Username {
 
-    private String name;
+    private final String name;
 
     public Username(String name) {
         if (name.length() < 3) {
