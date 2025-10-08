@@ -1,7 +1,11 @@
 package self.jjjyjj.tdd.alan;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 /**
- * The username should be converted to lowercase and should be at least 3 characters long
+ * The username should be converted to lowercase and should be at least 3 characters long.
+ * Note this class is a value object, so it should be immutable.
  */
 public class Username {
 
@@ -19,4 +23,13 @@ public class Username {
         return this.name.toLowerCase();
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        return EqualsBuilder.reflectionEquals(this, obj);
+    }
+
+    @Override
+    public int hashCode() {
+        return HashCodeBuilder.reflectionHashCode(this);
+    }
 }
