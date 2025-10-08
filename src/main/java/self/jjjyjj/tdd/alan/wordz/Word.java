@@ -9,6 +9,9 @@ public class Word {
 
     public Score guess(String guess) {
         var score = new Score();
+        for (int i = 0; i < this.word.length(); i++) {
+            score.assess(this.word.charAt(i), guess.charAt(i));
+        }
         return score;
     }
 }
