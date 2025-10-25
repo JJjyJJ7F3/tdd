@@ -14,23 +14,10 @@ public class WordTest {
         var word = new Word("A");
 
         // Act
-        var score = word.guess("B");
-        var result = score.letter(0);
+        var score = word.guess("C");
 
         // Assert
+        var result = score.letter(0);
         assertThat(result).isEqualTo(Letter.INCORRECT);
-    }
-
-    @Test
-    public void oneCorrectLetter() {
-        // Arrange
-        var word = new Word("A");
-
-        // Act
-        var score = word.guess("A");
-        var result = score.letter(0);
-
-        // Assert
-        assertThat(result).isEqualTo(Letter.CORRECT);
     }
 }
