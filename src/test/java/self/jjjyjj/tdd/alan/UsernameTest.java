@@ -2,7 +2,7 @@ package self.jjjyjj.tdd.alan;
 
 import org.junit.jupiter.api.Test;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.*;
 
 public class UsernameTest {
     @Test
@@ -15,5 +15,18 @@ public class UsernameTest {
 
         // Assert
         assertThat(actual).isEqualTo("singularity");
+    }
+
+    @Test
+    public void rejectShortNames() {
+        assertThatExceptionOfType(InvalidNameException.class)
+                .isThrownBy(
+                        () -> new Username("S")
+                );
+    }
+
+    @Test
+    public void acceptsLongNames() {
+        assertThatNoException().isThrownBy(() -> new Username("LongUsername"));
     }
 }
