@@ -1,12 +1,16 @@
 package self.jjjyjj.tdd.alan.wordz;
 
 public class Word {
-    public Word(String actual) {
+    private final String actual;
 
+    public Word(String actual) {
+        this.actual = actual;
     }
 
     public Score guess(String attempt) {
-        Score score = new Score();
+        Score score = new Score(actual);
+
+        score.access(0, attempt);
         return score;
     }
 }

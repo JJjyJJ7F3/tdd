@@ -20,4 +20,17 @@ public class WordTest {
         var result = score.letter(0);
         assertThat(result).isEqualTo(Letter.INCORRECT);
     }
+
+    @Test
+    public void oneCorrectLetter() {
+        // Arrange
+        var word = new Word("A");
+
+        // Act
+        var score = word.guess("A");
+
+        // Assert
+        var result = score.letter(0);
+        assertThat(result).isEqualTo(Letter.CORRECT);
+    }
 }
