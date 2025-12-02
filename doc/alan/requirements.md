@@ -17,8 +17,3 @@ To focus on the techniques of TDD, we will leave certain things out of our scope
 authentication and the user interface. A production version would, of course, include these aspects.
 But to implement these features, we don’t need any new TDD techniques.
 This simple design will allow us to fully explore TDD through all the layers of a typical web application
-
-## decisions
-- Supporting a variable number of letters in a word
-- Representing the score using a simple enum of INCORRECT, PART_CORRECT, or CORRECT
-- Accessing each score by its position in the word, zero-based
